@@ -15,7 +15,7 @@ Is a Service Provider, Implements the SPI. An application with extensible servic
 
 ```scala
     val p = RecordProcssorService.getRecordProcessor("A")
-    val dat = sc.parallelize(Seq("Rabin","Mark","Jeff"))
+    val dat = sc.parallelize(Seq("R1","R2","R3"))
     val processed = dat.map { x => p.processRecord(x) }
 ```
 
