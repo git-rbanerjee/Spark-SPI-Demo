@@ -11,7 +11,7 @@ The Spark Base code which is going to use business logics as a Service
 Is a Service provider interface (SPI).The set of public interfaces and abstract classes that a service defines. The SPI defines the classes and methods available to your application.
 
 #spark-spi-record-processer-a
-Is a Service Provider, Implements the SPI. An application with extensible services enable you, vendors, and customers to add service providers without modifying the original application. There could be many Service Providers for a SPI.
+Is a Service Provider, Implements the SPI. An application with extensible services enable you, vendors, and customers to add service providers without modifying the original application. There could be many Service Providers for a SPI. [Service providers metadata](https://github.com/git-rbanerjee/Spark-SPI-Demo/tree/master/spark-spi-record-processer-a/src/main/resources/META-INF/services) should be present in all the service providers Jar.
 
 ```scala
   val p = RecordProcssorService.getRecordProcessor("ProcessorTypeA")
