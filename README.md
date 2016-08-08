@@ -14,9 +14,9 @@ Is a Service provider interface (SPI).The set of public interfaces and abstract 
 Is a Service Provider, Implements the SPI. An application with extensible services enable you, vendors, and customers to add service providers without modifying the original application. There could be many Service Providers for a SPI. [Service providers metadata](https://github.com/git-rbanerjee/Spark-SPI-Demo/tree/master/spark-spi-record-processer-a/src/main/resources/META-INF/services) should be present in all the service providers Jar.
 
 ```scala
-  val p = RecordProcssorService.getRecordProcessor("ProcessorTypeA")
-   if( p != null)
-     println (p.processRecord("record1") )
+    val p = RecordProcssorService.getRecordProcessor("A")
+    val dat = sc.parallelize(Seq("Rabin","Mark","Jeff"))
+    val processed = dat.map { x => p.processRecord(x) }
 ```
 
 [Read more about SPI](https://docs.oracle.com/javase/tutorial/sound/SPI-intro.html)
